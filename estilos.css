@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     background-color: #fce4ec;
@@ -11,31 +11,40 @@ body {
     margin: 20px;
 }
 
+/* Título */
 h1 {
     color: #d81b60;
-}
-
-/* Estilos para cada ciclo */
-.ciclo {
+    font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
-.ciclo h2 {
-    color: #c2185b;
-}
-
-/* Estilos para cada materia */
-.materia {
+/* Estilo para cada semestre */
+.semestre {
     display: inline-block;
-    padding: 20px;
+    width: 23%;
     margin: 10px;
     background-color: #f8bbd0;
+    padding: 20px;
+    border-radius: 10px;
+    vertical-align: top;
+    min-height: 350px;
+}
+
+.semestre h2 {
+    color: #c2185b;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las materias */
+.materia {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #ff80ab;
     color: #880e4f;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
-    width: 250px;
-    text-align: center;
     transition: background-color 0.3s, transform 0.2s ease;
 }
 
@@ -46,7 +55,7 @@ h1 {
 }
 
 .materia.requisito-desbloqueado {
-    background-color: #ff80ab;
+    background-color: #ff4081;
     color: white;
 }
 
@@ -67,4 +76,10 @@ h1 {
 
 .materia.requisito-desbloqueado .requisito {
     visibility: visible;
+}
+
+/* Estilo para el contenedor de las materias */
+.materias-container {
+    display: flex;
+    flex-direction: column;
 }
