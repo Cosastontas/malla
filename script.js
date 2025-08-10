@@ -1,8 +1,5 @@
-// Obtenemos todas las materias
-const materias = document.querySelectorAll('.materia');
-
-// Función para manejar el clic en cada materia
-materias.forEach(materia => {
+// Función que maneja la interacción y desbloqueo de materias
+document.querySelectorAll('.materia').forEach(materia => {
     materia.addEventListener('click', () => {
         // Si la materia ya está aprobada, no hacer nada
         if (materia.classList.contains('aprobada')) return;
@@ -10,21 +7,19 @@ materias.forEach(materia => {
         // Aprobar la materia al hacer clic
         materia.classList.add('aprobada');
         
-        // Revisar si es requisito de otra materia
+        // Verificar y desbloquear requisitos de otras materias
         desbloquearRequisitos(materia);
     });
 });
 
-// Función para desbloquear los requisitos de otras materias
+// Función para desbloquear las materias que tienen requisitos
 function desbloquearRequisitos(materia) {
-    const requisitos = document.querySelectorAll('.materia');
+    const requisitos = materia.getAttribute('data-requisitos').split(',');
 
-    requisitos.forEach(req => {
-        const requisito = req.querySelector('.requisito');
-        
-        // Si esta materia es un requisito de alguna otra, desbloquearla
-        if (requisito && materia.id === requisito.textContent.split(": ")[1].toLowerCase().replace(/ /g, '-')) {
-            req.classList.add('requisito-desbloqueado');
+    requisitos.forEach(requisito => {
+        const materiaRequisito = document.getElementById(requisito.trim());
+        if (materiaRequisito) {
+            materiaRequisito.classList.add('requisito-desbloqueado');
         }
     });
 }
