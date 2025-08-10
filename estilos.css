@@ -9,6 +9,7 @@ body {
 
 .container {
     margin: 20px;
+    font-size: 1.2rem;
 }
 
 /* Título */
@@ -76,10 +77,4 @@ h1 {
 
 .materia.requisito-desbloqueado .requisito {
     visibility: visible;
-}
-
-/* Estilo para el contenedor de las materias */
-.materias-container {
-    display: flex;
-    flex-direction: column;
 }
