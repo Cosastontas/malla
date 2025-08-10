@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Malla Curricular de Medicina</h1>
+        <div class="ciclo" id="ciclo1">
+            <h2>I Ciclo</h2>
+            <div class="materia" id="biologia">Biología</div>
+            <div class="materia" id="humanismo-persona">Humanismo y Persona</div>
+            <div class="materia" id="lenguaje-pensamiento">Lenguaje y Pensamiento I</div>
+            <div class="materia" id="logica-matematica">Lógica Matemática</div>
+            <div class="materia" id="morfogenesis-i">Morfogénesis I</div>
+            <div class="materia" id="morfologia-macro-i">Morfología Macro I</div>
+            <div class="materia" id="morfologia-micro-i">Morfología Micro I</div>
+            <div class="materia" id="ambiente-salud">Ambiente y Salud</div>
+            <div class="materia" id="bioquimica">Bioquímica</div>
+            <div class="materia" id="epistemologia-medica">Epistemología Médica</div>
+        </div>
 
+        <div class="ciclo" id="ciclo2">
+            <h2>II Ciclo</h2>
+            <div class="materia" id="fisiologia-i">Fisiología I <span class="requisito">Requiere: Biología</span></div>
+            <div class="materia" id="humanismo-sociedad">Humanismo y Sociedad <span class="requisito">Requiere: Humanismo y Persona</span></div>
+            <div class="materia" id="lenguaje-pensamiento-ii">Lenguaje y Pensamiento II <span class="requisito">Requiere: Lenguaje y Pensamiento I</span></div>
+            <div class="materia" id="morfogenesis-ii">Morfogénesis II <span class="requisito">Requiere: Morfogénesis I</span></div>
+            <div class="materia" id="morfologia-macro-ii">Morfología Macro II <span class="requisito">Requiere: Morfología Macro I</span></div>
+            <div class="materia" id="morfologia-micro-ii">Morfología Micro II <span class="requisito">Requiere: Morfología Micro I</span></div>
+            <div class="materia" id="atencion-primaria">Atención Primaria de Salud</div>
+            <div class="materia" id="competencias-digitales">Competencias Digitales</div>
+        </div>
+        
+        <!-- Continúa de la misma forma para los demás ciclos -->
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
