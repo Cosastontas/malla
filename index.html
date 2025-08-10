@@ -3,40 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malla Interactiva</title>
+    <title>Malla Curricular Interactiva</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Malla Curricular de Medicina</h1>
+        
+        <!-- I Ciclo -->
         <div class="ciclo" id="ciclo1">
             <h2>I Ciclo</h2>
-            <div class="materia" id="biologia">Biología</div>
-            <div class="materia" id="humanismo-persona">Humanismo y Persona</div>
-            <div class="materia" id="lenguaje-pensamiento">Lenguaje y Pensamiento I</div>
-            <div class="materia" id="logica-matematica">Lógica Matemática</div>
-            <div class="materia" id="morfogenesis-i">Morfogénesis I</div>
-            <div class="materia" id="morfologia-macro-i">Morfología Macro I</div>
-            <div class="materia" id="morfologia-micro-i">Morfología Micro I</div>
-            <div class="materia" id="ambiente-salud">Ambiente y Salud</div>
-            <div class="materia" id="bioquimica">Bioquímica</div>
-            <div class="materia" id="epistemologia-medica">Epistemología Médica</div>
+            <div class="materia" id="biologia" data-requisitos="[]">Biología</div>
+            <div class="materia" id="humanismo-persona" data-requisitos="[]">Humanismo y Persona</div>
+            <div class="materia" id="lenguaje-pensamiento" data-requisitos="[]">Lenguaje y Pensamiento I</div>
+            <div class="materia" id="logica-matematica" data-requisitos="[]">Lógica Matemática</div>
+            <div class="materia" id="morfogenesis-i" data-requisitos="[]">Morfogénesis I</div>
+            <div class="materia" id="morfologia-macro-i" data-requisitos="[]">Morfología Macro I</div>
+            <div class="materia" id="morfologia-micro-i" data-requisitos="[]">Morfología Micro I</div>
+            <div class="materia" id="ambiente-salud" data-requisitos="[]">Ambiente y Salud</div>
+            <div class="materia" id="bioquimica" data-requisitos="[]">Bioquímica</div>
+            <div class="materia" id="epistemologia-medica" data-requisitos="[]">Epistemología Médica</div>
         </div>
 
+        <!-- II Ciclo -->
         <div class="ciclo" id="ciclo2">
             <h2>II Ciclo</h2>
-            <div class="materia" id="fisiologia-i">Fisiología I <span class="requisito">Requiere: Biología</span></div>
-            <div class="materia" id="humanismo-sociedad">Humanismo y Sociedad <span class="requisito">Requiere: Humanismo y Persona</span></div>
-            <div class="materia" id="lenguaje-pensamiento-ii">Lenguaje y Pensamiento II <span class="requisito">Requiere: Lenguaje y Pensamiento I</span></div>
-            <div class="materia" id="morfogenesis-ii">Morfogénesis II <span class="requisito">Requiere: Morfogénesis I</span></div>
-            <div class="materia" id="morfologia-macro-ii">Morfología Macro II <span class="requisito">Requiere: Morfología Macro I</span></div>
-            <div class="materia" id="morfologia-micro-ii">Morfología Micro II <span class="requisito">Requiere: Morfología Micro I</span></div>
-            <div class="materia" id="atencion-primaria">Atención Primaria de Salud</div>
-            <div class="materia" id="competencias-digitales">Competencias Digitales</div>
+            <div class="materia" id="fisiologia-i" data-requisitos="['biologia']">Fisiología I</div>
+            <div class="materia" id="humanismo-sociedad" data-requisitos="['humanismo-persona']">Humanismo y Sociedad</div>
+            <div class="materia" id="lenguaje-pensamiento-ii" data-requisitos="['lenguaje-pensamiento']">Lenguaje y Pensamiento II</div>
+            <div class="materia" id="morfogenesis-ii" data-requisitos="['morfogenesis-i']">Morfogénesis II</div>
+            <div class="materia" id="morfologia-macro-ii" data-requisitos="['morfologia-macro-i']">Morfología Macro II</div>
+            <div class="materia" id="morfologia-micro-ii" data-requisitos="['morfologia-micro-i']">Morfología Micro II</div>
+            <div class="materia" id="atencion-primaria" data-requisitos="[]">Atención Primaria de Salud</div>
+            <div class="materia" id="competencias-digitales" data-requisitos="[]">Competencias Digitales</div>
         </div>
-        
-        <!-- Continúa de la misma forma para los demás ciclos -->
-        
+
+        <!-- III Ciclo -->
+        <div class="ciclo" id="ciclo3">
+            <h2>III Ciclo</h2>
+            <div class="materia" id="fisiologia-ii" data-requisitos="['fisiologia-i']">Fisiología II</div>
+            <div class="materia" id="metodologia-investigacion-i" data-requisitos="[]">Metodología de la Investigación I</div>
+            <div class="materia" id="morfogenesis-iii" data-requisitos="['morfogenesis-ii']">Morfogénesis III</div>
+            <div class="materia" id="morfologia-macro-iii" data-requisitos="['morfologia-macro-ii']">Morfología Macro III</div>
+            <div class="materia" id="morfologia-micro-iii" data-requisitos="['morfologia-micro-ii']">Morfología Micro III</div>
+            <div class="materia" id="psiconeurologia" data-requisitos="['fisiologia-i']">Psiconeurología</div>
+            <div class="materia" id="bioquimica-ii" data-requisitos="[]">Bioquímica</div>
+        </div>
+
+        <!-- IV Ciclo -->
+        <div class="ciclo" id="ciclo4">
+            <h2>IV Ciclo</h2>
+            <div class="materia" id="bioestadistica-i" data-requisitos="[]">Bioestadística I</div>
+            <div class="materia" id="farmacologia-i" data-requisitos="[]">Farmacología I</div>
+            <div class="materia" id="fisiopatologia-i" data-requisitos="['fisiologia-i']">Fisiopatología I</div>
+            <div class="materia" id="inmunologia" data-requisitos="[]">Inmunología</div>
+            <div class="materia" id="medicina-preventiva" data-requisitos="[]">Medicina Preventiva</div>
+            <div class="materia" id="microbiologia" data-requisitos="[]">Microbiología</div>
+            <div class="materia" id="patologia-i" data-requisitos="[]">Patología I</div>
+            <div class="materia" id="semiologia-i" data-requisitos="[]">Semiología I</div>
+            <div class="materia" id="competencias-digitales-ii" data-requisitos="[]">Competencias Digitales II</div>
+        </div>
+
+        <!-- V Ciclo -->
+        <div class="ciclo" id="ciclo5">
+            <h2>V Ciclo</h2>
+            <div class="materia" id="semiologia-ii" data-requisitos="['semiologia-i']">Semiología II</div>
+            <div class="materia" id="bioestadistica-ii" data-requisitos="['bioestadistica-i']">Bioestadística II</div>
+            <div class="materia" id="clinica-i-cardiologia" data-requisitos="[]">Clínica I (Componente Cardiología)</div>
+            <div class="materia" id="clinica-i-neumologia" data-requisitos="[]">Clínica I (Componente Neumología)</div>
+            <div class="materia" id="etica-medica" data-requisitos="[]">Ética Médica</div>
+            <div class="materia" id="historia-de-la-medicina" data-requisitos="[]">Historia de la Medicina</div>
+            <div class="materia" id="patologia-ii" data-requisitos="['patologia-i']">Patología II</div>
+            <div class="materia" id="fisiopatologia-ii" data-requisitos="['fisiopatologia-i']">Fisiopatología II</div>
+        </div>
+
+        <!-- VI Ciclo -->
+        <div class="ciclo" id="ciclo6">
+            <h2>VI Ciclo</h2>
+            <div class="materia" id="medicina-tropical" data-requisitos="[]">Medicina Tropical</div>
+            <div class="materia" id="pediatria-i" data-requisitos="[]">Pediatría I</div>
+            <div class="materia" id="antropologia-medica" data-requisitos="[]">Antropología Médica</div>
+            <div class="materia" id="clinica-ii-dermatologia" data-requisitos="['semiologia-i']">Clínica II (Componente Dermatología)</div>
+            <div class="materia" id="clinica-ii-gastroenterologia" data-requisitos="['semiologia-i']">Clínica II (Componente Gastroenterología)</div>
+            <div class="materia" id="clinica-ii-nutricion" data-requisitos="['semiologia-i']">Clínica II (Componente Nutrición)</div>
+            <div class="materia" id="clinica-ii-practica" data-requisitos="['semiologia-i']">Clínica II (Práctica)</div>
+        </div>
+
+        <!-- VII Ciclo -->
+        <div class="ciclo" id="ciclo7">
+            <h2>VII Ciclo</h2>
+            <div class="materia" id="informatica-medica" data-requisitos="[]">Informática Médica</div>
+            <div class="materia" id="obstetricia" data-requisitos="[]">Obstetricia</div>
+            <div class="materia" id="clinica-iii-endocrinologia" data-requisitos="['clinica-ii']">Clínica III (Componente Endocrinología)</div>
+            <div class="materia" id="clinica-iii-hematologia-oncologia" data-requisitos="['clinica-ii']">Clínica III (Componente Hematología-Oncología)</div>
+            <div class="materia" id="clinica-iii-nefrologia" data-requisitos="['clinica-ii']">Clínica III (Componente Nefrología)</div>
+            <div class="materia" id="clinica-iii-practica" data-requisitos="['clinica-ii']">Clínica III (Práctica)</div>
+            <div class="materia" id="diagnostico-por-imagenes-i" data-requisitos="[]">Diagnóstico por Imágenes I</div>
+            <div class="materia" id="epidemiologia-ii" data-requisitos="['epidemiologia-i']">Epidemiología II</div>
+        </div>
+
+        <!-- VIII Ciclo -->
+        <div class="ciclo" id="ciclo8">
+            <h2>VIII Ciclo</h2>
+            <div class="materia" id="pediatria-ii" data-requisitos="['pediatria-i']">Pediatría II</div>
+            <div class="materia" id="clinica-iv-geriatria" data-requisitos="['clinica-iii']">Clínica IV (Componente Geriatría)</div>
+            <div class="materia" id="clinica-iv-neurologia" data-requisitos="['clinica-iii']">Clínica IV (Componente Neurología)</div>
+            <div class="materia" id="clinica-iv-reumatologia" data-requisitos="['clinica-iii']">Clínica IV (Componente Reumatología)</div>
+            <div class="materia" id="clinica-quirurgica-i-otorinolaringologia-practica" data-requisitos="['clinica-iii']">Clínica Quirúrgica I (Componente Otorrinolaringología - Práctica)</div>
+            <div class="materia" id="clinica-quirurgica-i-traumatologia-practica" data-requisitos="['clinica-iii']">Clínica Quirúrgica I (Componente Traumatología - Práctica)</div>
+        </div>
+
+        <!-- IX Ciclo -->
+        <div class="ciclo" id="ciclo9">
+            <h2>IX Ciclo</h2>
+            <div class="materia" id="clinica-quirurgica-i-urologia-teoria" data-requisitos="['clinica-iii']">Clínica Quirúrgica I (Componente Urología Teoría)</div>
+            <div class="materia" id="diagnostico-por-imagenes-ii" data-requisitos="['diagnostico-por-imagenes-i']">Diagnóstico por Imágenes II</div>
+            <div class="materia" id="psiquiatria" data-requisitos="[]">Psiquiatría</div>
+            <div class="materia" id="tecnicas-quirurgicas" data-requisitos="[]">Técnicas Quirúrgicas</div>
+            <div class="materia" id="administracion-servicios-salud" data-requisitos="[]">Administración de Servicios de Salud</div>
+            <div class="materia" id="anestesiologia-reanimacion" data-requisitos="[]">Anestesiología y Reanimación</div>
+        </div>
+
+        <!-- X Ciclo -->
+        <div class="ciclo" id="ciclo10">
+            <h2>X Ciclo</h2>
+            <div class="materia" id="clinica-quirurgica-ii-urologia-teoria" data-requisitos="['clinica-quirurgica-i']">Clínica Quirúrgica II (Componente Urología Teoría)</div>
+            <div class="materia" id="diseno-elaboracion-proyectos-investigacion" data-requisitos="['metodologia-investigacion-i']">Diseño y Elaboración de Proyectos de Investigación</div>
+            <div class="materia" id="legislacion-medica" data-requisitos="[]">Legislación Médica</div>
+            <div class="materia" id="urgencias-medicas" data-requisitos="['tecnicas-quirurgicas']">Urgencias Médicas</div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
